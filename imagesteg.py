@@ -153,11 +153,11 @@ def main():
             name = img_name
         if img is not None:
             file_details = {"FileName": img.name, "FileType": img.type}
+            st.write(img)
             st.write(file_details)
             img = load_image(img)
             st.image(img, width=250)
-            with open(os.path.join("tempDir",file_details["FileName"]), "wb") as f:
-                f.write(img.read())
+            img.save(file_details["FileName"], str(file_details["FileName"].split(".")[1].upper())) 
             st.success("Saved File")
             bytes_data = StringIO(img.getvalue().decode("utf-8"))
             newimg = encode(bytes_data, data, name)
