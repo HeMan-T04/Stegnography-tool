@@ -7,7 +7,9 @@ import streamlit as st
 from io import StringIO
 import os
 import numpy as np
-
+import firebase_admin
+from firebase_admin import credentials, storage
+ # connecting to firebase
 # Convert encoding data into 8-bit binary
 # form using ASCII value of characters
 def genData(data):
@@ -62,6 +64,7 @@ def modPix(pix, data):
                     pix[-1] -= 1
                 else:
                     pix[-1] += 1
+
 
         else:
             if pix[-1] % 2 != 0:
@@ -135,6 +138,17 @@ def decode():
 
 # Main Function
 def main():
+    try:
+        app = firebase_admin.get_app()
+    except ValueError as e:
+        cred = credentials.Certificate("credentials.json")
+        firebase_admin.initialize_app(cred,{'storageBucket': 'stegproject-99219.appspot.com/'})
+    # if not firebase_admin._apps:
+    #     cred = credentials.Certificate("credentials.json")
+    #     firebase_admin.initialize_app(cred,{'storageBucket': 'stegproject-99219.appspot.com/'})
+        # firebase_admin.get_app()
+    # print(firebase_admin._apps)
+    #initialize_app() # initializing firebase
     st.markdown("# Image Steganography")
     tab1, tab2 = st.tabs(["Encode", "Decode"])
 
@@ -149,18 +163,21 @@ def main():
         img_name = st.text_input(
             "Enter the Encoded Image Name with format of the image:",
         )
+        
         if img_name:
             name = img_name
         if img is not None:
             file_details = {"FileName": img.name, "FileType": img.type}
-            st.write(img)
-            st.write(file_details)
-            img = load_image(img)
+            st.image(img, caption="Uploaded Image", use_column_width=True)
+
+        # Upload image to Firebase Storage
+            bucket = storage.bucket("stegproject-99219.appspot.com")
+            blob = bucket.blob("images/" + file_details["FileName"])
+            image_bytes = img.read()
+            blob.upload_from_string(image_bytes, content_type=img.type)
+            st.success("Image uploaded successfully!")
             st.image(img, width=250)
-            img.save(file_details["FileName"], str(file_details["FileName"].split(".")[1].upper())) 
-            st.success("Saved File")
-            bytes_data = StringIO(img.getvalue().decode("utf-8"))
-            newimg = encode(bytes_data, data, name)
+            newimg = encode(image_bytes, data, name)
             st.success("Image Encoded Successfully")
             st.download_button(
                 label="Download Image",
