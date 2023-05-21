@@ -1,6 +1,6 @@
 import streamlit as st
-# import firebase_admin
-# from firebase_admin import credentials, storage
+import firebase_admin
+from firebase_admin import credentials, storage
 from PIL import Image, ImageDraw, ImageFont
 
 # Initialize Firebase Admin SDK
