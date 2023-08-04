@@ -80,9 +80,9 @@ if __name__ == "__main__":
         if submitted:
           if dimg is not None:
             file_details = {"FileName": dimg.name, "FileType": dimg.type}
-            with open(os.path.join(os.path.join("Imagedir",img.name)),"wb") as f: 
+            with open(os.path.join(os.path.join("Imagedir",dimg.name)),"wb") as f: 
               f.write(dimg.getbuffer())
-            decoded_image = decode_image(os.path.join("Imagedir",img.name))
+            decoded_image = decode_image(os.path.join("Imagedir",dimg.name))
             print(decoded_image)
             st.success("Image Decoded Successfully")
             st.write("Decoded Message: ",decoded_image)
