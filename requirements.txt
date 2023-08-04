@@ -1,3 +1,13 @@
 opencv-python
 numpy
 streamlit
+python-opencv                                                                                                               
+vtk                                                                                                                         
+pugixml                                                                                                                     
+opencv                                                                                                                      
+onetbb                                                                                                                      
+jsoncpp                                                                                                                     
+hdf5                                                                                                                        
+libaec                                                                                                                      
+glew                                                                                                                        
+fmt 
