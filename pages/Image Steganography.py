@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import streamlit as st
 import os
+from Home import footer
+st.markdown(footer,unsafe_allow_html=True)
 
 def char_generator(message):
   for c in message:
@@ -39,7 +41,7 @@ def decode_image(img_loc):
         if img[i-1][j-1][0] != 0:
           message = message + chr(img[i-1][j-1][0])
         else:
-          print(message)
+          # print(message)
           return message
         
 if __name__ == "__main__":
