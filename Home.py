@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_card import card
 from urllib.parse import urlencode
 
 st.set_page_config(layout="wide")
