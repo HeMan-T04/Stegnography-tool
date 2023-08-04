@@ -73,7 +73,7 @@ if __name__ == "__main__":
               mime='image/png',
             )
     with tab2:
-      st.header("Encode Image")
+      st.header("Decode Image")
       with st.form("Decode"):
         dimg = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
         submitted = st.form_submit_button("Decode")
