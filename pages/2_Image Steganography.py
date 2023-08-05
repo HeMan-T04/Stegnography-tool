@@ -3,6 +3,7 @@ import numpy as np
 import streamlit as st
 import os
 from Home import footer
+st.set_page_config(layout="wide")
 st.markdown(footer,unsafe_allow_html=True)
 
 def char_generator(message):
