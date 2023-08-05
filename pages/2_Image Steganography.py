@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import streamlit as st
 import os
-from Home import footer
+from Components import footer
 st.set_page_config(layout="wide")
 st.markdown(footer,unsafe_allow_html=True)
 

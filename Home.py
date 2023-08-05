@@ -1,58 +1,8 @@
 import streamlit as st
 import time
 from urllib.parse import urlencode
-
+from Components import create_card, footer
 st.set_page_config(layout="wide")
-def create_card(url, title,align,link):
-    c1='''
-        <a href="'''+link+'''" target="_self">
-        <div style=" margin-'''+align+''':15rem;">
-        <div>
-        <img src="
-        '''+url+'''" alt='image'  style="object-fit: cover; width: 100%; height:25rem;border-top-right-radius: 20px;border-top-left-radius: 20px;">
-        <div style='background-color: #1a202b; padding: 10px; border-bottom-right-radius: 20px;border-bottom-left-radius: 20px; width: 100%;margin-bottom:1rem;'>
-        <h5 style='text-align: center; font-style: italic; font-size: 20px;'>'''+title+'''</h5>
-        </div>
-        </div>
-        </div></a>'''
-#     c1='''
-#         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-# <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-# <div class="container" style="display:flex; justify-content: '''+align+''';">
-# <div class="card text-bg-dark" style="width: 60%;margin-bottom:1rem;">
-#   <img src="
-#         '''+url+'''" " class="card-img-top" style="display:flex; object-fit: cover; width: 100%; height:20rem;" alt="...">
-#   <div class="card-body w-100">
-#     <h5 class="card-text"style='text-align: center; font-style: italic;'>'''+title+'''</h5>
-#   </div>
-# </div></div>'''
-    return c1
-footer="""<style>
-a:link , a:visited{
-color:inherit;
-background-color: transparent;
-}
-
-a:hover,  a:active {
-background-color: transparent;
-}
-
-.footer {
-position: fixed;
-left: 0;
-zindex:2147483647;
-bottom: 0;
-width: 100%;
-background-color: #0e1117;
-color: white;
-text-align: right;
-padding-right: 3vw;
-}
-</style>
-<div class="footer">
-<p>Developed with ❤ by <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Hemant Kathuria</a></p>
-</div>
-"""
 st.markdown(footer,unsafe_allow_html=True)
 
 if __name__ == "__main__":
