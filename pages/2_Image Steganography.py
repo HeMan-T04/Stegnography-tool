@@ -60,15 +60,15 @@ if __name__ == "__main__":
             if submitted:
                 if img is not None:
                     file_details = {"FileName": img.name, "FileType": img.type}
-                    with open(os.path.join("Imagedir",img.name),"wb") as f: 
+                    with open(os.path.join("pages/Imagedir","Image.png"),"wb") as f: 
                         f.write(img.getbuffer())
-                    encoded_image = encode_image(os.path.join("Imagedir",img.name), text_input)
-                    cv2.imwrite(os.path.join("Imagedir","EncodedImage.png"), encoded_image)
+                    encoded_image = encode_image(os.path.join("pages/Imagedir","Image.png"), text_input)
+                    cv2.imwrite(os.path.join("pages/Imagedir","EncodedImage.png"), encoded_image)
                     # st.image("EncodedImage.png", caption="Encoded Image", use_column_width=True)
                     st.success("Image Encoded Successfully")
                     st.markdown("Download Encoded Image")
         if submitted: 
-          with open(os.path.join("Imagedir","EncodedImage.png"), "rb") as file:
+          with open(os.path.join("pages/Imagedir","EncodedImage.png"), "rb") as file:
             st.download_button(             
               label="Download Image",
               data=file,
@@ -83,9 +83,9 @@ if __name__ == "__main__":
         if submitted:
           if dimg is not None:
             file_details = {"FileName": dimg.name, "FileType": dimg.type}
-            with open(os.path.join(os.path.join("Imagedir",dimg.name)),"wb") as f: 
+            with open(os.path.join(os.path.join("pages/Imagedir",dimg.name)),"wb") as f: 
               f.write(dimg.getbuffer())
-            decoded_image = decode_image(os.path.join("Imagedir",dimg.name))
+            decoded_image = decode_image(os.path.join("pages/Imagedir",dimg.name))
             print(decoded_image)
             st.success("Image Decoded Successfully")
             st.write("Decoded Message: ",decoded_image)
