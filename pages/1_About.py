@@ -8,13 +8,20 @@ if __name__ == "__main__":
     st.write("<h2 style='font-size: 30px;'><b>Features</b></h2>",unsafe_allow_html=True)
     st.markdown("<ul style='text-align:justify'><li><h5 style='padding-bottom:0.3rem'>Image Steganography:</h5><p>Image steganography is the practice of hiding confidential data within a cover image. One well-known approach to image steganography is the Least Significant Bit (LSB) method. The idea behind LSB embedding is that if we change the last bit value of a pixel, there won’t be much visible change in the color. For example, 0 is black. Changing the value to 1 won’t make much of a difference since it is still black, just a lighter shade. <br/>LSB methods are vulnerable to changes resulting from lossy compression or image processing. Therefore, it is best to use lossless image compression formats like PNG when applying LSB techniques for image steganography. Lossless compression ensures that the original data can be recovered exactly when the image is decompressed, which is important for retrieving the hidden data.</p></li><li><h5>Audio Steganography</h5><p>Coming Soon....</p></li><li><h5>Video Steganography</h5><p>Coming Soon....</p></li><li><h5>Text Steganography</h5><p>Coming Soon....</p></li></ul>",unsafe_allow_html=True)
     st.write("<h2 style='font-size: 30px;'><b>About Developers</b></h2>",unsafe_allow_html=True)
-    st.write(''' <div style="display: flex;justify-content: space-between"><ul><h3 style='font-size: 20px;'><b>Hemant Kathuria : HeMan-T04</b></h3>
+    st.write(''' <style>
+    .column1 {float: left;width:70%;padding: 10px;}
+    .column2 {float: left;width:30%;padding: 10px; justify-content: center;}
+    .row:after {content: "";display: table;clear: both;}
+    @media screen and (max-width: 600px){
+    .column1 {width: 100%;}
+    .column2 {width: 100%;}}</style><div class="row"style="">
+    <div class="column1"><ul><h3 style='font-size: 20px;'><b>Hemant Kathuria : HeMan-T04</b></h3>
     <li>A passionate developer</li>
     <li>Playing CTF's at spare time</li>
     <li>A heavy Cybersecurity Enthusiast </li>
     <li>Final year student of Bachelors of Computer Applications (BCA) from Vivekananda Institute of Professional Studies- Technical Campus(VIPS-TC)</li>
     <li>Currently Using : Endeavour OS and Windows 11(Dual Booted)(Don't Prefer Windows much just for gaming)</li>
-    <li>I’m currently open for an Intern or a new job opportunity, this is <a href="https://drive.google.com/file/d/19ZK1cttBAOpZuFLkPsQp1OolMOC5VRTa/view?usp=sharing">my resume</a></li></ul>
-    <img src="https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/programming.svg?alt=media&token=0c365a52-a285-45a6-b991-e2129fecb743" style="width: 15rem; height: 15rem; margin-right: 2rem;"/></div>''',unsafe_allow_html=True)
+    <li>I’m currently open for an Intern or a new job opportunity, this is <a href="https://drive.google.com/file/d/19ZK1cttBAOpZuFLkPsQp1OolMOC5VRTa/view?usp=sharing">my resume</a></li></ul></div>
+    <div class="column2"><img src="https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/programming.svg?alt=media&token=0c365a52-a285-45a6-b991-e2129fecb743" style="width: 17rem; height: 17rem;"/></div></div>''',unsafe_allow_html=True)
     st.markdown('''## <b> Let's Connect..!</b><br/><div align='left'><ul><li><a href="https://www.linkedin.com/in/hemant-kathuria-638977232/" target="_blank"><img src="https://img.shields.io/badge/linkedin:  HeManT04-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white" alt=linkedin style="margin-bottom: 5px;"/></a></li><li><a href="https://github.com/HeMan-T04" target="_blank"><img src="https://img.shields.io/badge/github HeManT04-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt=github style="margin-bottom: 5px;"/></a></li><li><a href="mailto:hemantkathuria04@gmail.com" target="_blank"><img src="https://img.shields.io/badge/gmail:  HeManT04-%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" t=mail style="margin-bottom: 5px;" /></a></li><li><a href="https://drive.google.com/file/d/19ZK1cttBAOpZuFLkPsQp1OolMOC5VRTa/view?usp=sharing" target="_blank"><img src="https://img.shields.io/badge/Resume:  HeManT04-%23EA4335.svg?style=for-the-badge&logo=R&logoColor=white" t=mail style="margin-bottom: 5px;" /></a></li></ul></div>''',unsafe_allow_html=True)
 

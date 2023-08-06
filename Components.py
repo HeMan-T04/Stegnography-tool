@@ -1,8 +1,10 @@
 # Card Components
 def create_card(url, title,align,link):
     c1='''
+        <style>
+        </style>
         <a href="'''+link+'''" target="_self">
-        <div style=" margin-'''+align+''':15rem;">
+        <div style=" margin-'''+align+''':10vw;">
         <div>
         <img src="
         '''+url+'''" alt='image'  style="object-fit: cover; width: 100%; height:25rem;border-top-right-radius: 20px;border-top-left-radius: 20px;">
@@ -42,4 +44,4 @@ padding-right: 4vw;
 """
 
 # Work in progress component
-work_in_progress='''<div style='display:flex; justify-content: center;margin-top:10rem;'><img src='https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/wip.gif?alt=media&token=fe840370-1ac6-4ac7-a585-b96198698ba8' style='border-radius: 1rem'></div><h4 style='text-align: center;'><b>Work in Progress</b></h4>'''
+work_in_progress='''<div style='display:flex; justify-content: center;margin-top:2rem;'><img src='https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/wip.gif?alt=media&token=fe840370-1ac6-4ac7-a585-b96198698ba8' style='border-radius: 1rem'></div><h4 style='text-align: center;'><b>Work in Progress</b></h4>'''
