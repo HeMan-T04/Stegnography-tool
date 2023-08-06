@@ -1,6 +1,6 @@
 import streamlit as st
 from Components import footer
-st.set_page_config(page_title='About', layout = 'wide', initial_sidebar_state = 'auto')
+st.set_page_config(page_title='About',page_icon='https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/favicon.ico?alt=media&token=ba72f22f-3188-4e27-9ed7-19ddad766f0a', layout = 'wide', initial_sidebar_state = 'auto')
 if __name__ == "__main__":
     st.markdown(footer,unsafe_allow_html=True)
     st.write("<h1 style='font-size: 50px;'><b>Web Based Steganography Tool</b></h1>",unsafe_allow_html=True)
