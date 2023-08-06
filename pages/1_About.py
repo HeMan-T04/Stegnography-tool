@@ -1,6 +1,6 @@
 import streamlit as st
 from Components import footer
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='About', layout = 'wide', initial_sidebar_state = 'auto')
 if __name__ == "__main__":
     st.markdown(footer,unsafe_allow_html=True)
     st.write("<h1 style='font-size: 50px;'><b>Web Based Steganography Tool</b></h1>",unsafe_allow_html=True)

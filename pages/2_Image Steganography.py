@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st
 import os
 from Components import footer
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Image Steganography', layout = 'wide', initial_sidebar_state = 'auto')
 st.markdown(footer,unsafe_allow_html=True)
 
 def char_generator(message):

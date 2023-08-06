@@ -4,7 +4,7 @@ import streamlit as st
 import os
 import time
 from Components import footer, work_in_progress
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Text Steganography', layout = 'wide', initial_sidebar_state = 'auto')
 st.markdown(footer,unsafe_allow_html=True)
 
 if __name__ == "__main__":
