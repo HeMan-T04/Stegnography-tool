@@ -2,7 +2,8 @@ import streamlit as st
 import time
 from urllib.parse import urlencode
 from Components import create_card, footer
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Web Based Steganography Tool', layout = 'wide', initial_sidebar_state = 'auto')
+# st.set_page_config(layout="wide")
 st.markdown(footer,unsafe_allow_html=True)
 
 if __name__ == "__main__":
