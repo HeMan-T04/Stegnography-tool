@@ -39,7 +39,7 @@ padding-right: 4vw;
 }
 </style>
 <div class="footer">
-<p>Developed by <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Hemant Kathuria</a></p>
+<p>Developed by <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Hemant Kathuria</a> & <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Dinesh Thakur</a></p>
 </div>
 """
 
