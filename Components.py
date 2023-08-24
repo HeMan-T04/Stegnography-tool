@@ -39,9 +39,10 @@ padding-right: 4vw;
 }
 </style>
 <div class="footer">
-<p>Developed by <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Hemant Kathuria</a> & <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Dinesh Thakur</a></p>
+<p>Developed by <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Hemant Kathuria</a> </p>
 </div>
 """
 
 # Work in progress component
 work_in_progress='''<div style='display:flex; justify-content: center;margin-top:2rem;'><img src='https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/wip.gif?alt=media&token=fe840370-1ac6-4ac7-a585-b96198698ba8' style='border-radius: 1rem'></div><h4 style='text-align: center;'><b>Work in Progress</b></h4>'''
+'''& <a style='text-align: center;' href="https://github.com/HeMan-T04" target="_blank">Dinesh Thakur</a>'''
