@@ -11,7 +11,48 @@ if __name__ == "__main__":
     st.markdown("# Audio Steganography")
     tab1, tab2 = st.tabs(["Encode", "Decode"])
     with tab1:
-        st.write(work_in_progress,unsafe_allow_html=True)
+        # st.write(work_in_progress,unsafe_allow_html=True)
+        st.header("Encode Audio")
+        with st.form("Encode"):
+            img = st.file_uploader("Upload Audio", type=[".mp3"])
+            text_input = st.text_input(
+                "Enter text to Encode",
+            )
+            submitted = st.form_submit_button("Encode")
+            if submitted:
+                if img is not None:
+                    with open(os.path.join("pages/Imagedir","text.txt"), "wb") as file:
+                        file.write(text_input.encode())
+                    file_details = {"FileName": img.name, "FileType": img.type}
+                    with open(os.path.join("pages/Imagedir","audio.mp3"),"wb") as f: 
+                        f.write(img.getbuffer())
+                    # encoded_image = encode_image(os.path.join("pages/Imagedir","Image.png"), text_input)
+                    # cv2.imwrite(os.path.join("pages/Imagedir","EncodedImage.png"), encoded_image)
+                    # st.image("EncodedImage.png", caption="Encoded Image", use_column_width=True)
+                    st.success("Audio Encoded Successfully")
+                    st.markdown("Download Encoded Audio")
+        if submitted: 
+          with open(os.path.join("pages/Imagedir","audio.mp3"), "rb") as file:
+            st.download_button(             
+              label="Download Audio",
+              data=file,
+              file_name='audio.mp3',
+              mime='audio/mp3',
+            )
     with tab2:
-        st.write(work_in_progress,unsafe_allow_html=True)
-    
+        st.header("Decode Audio")
+        with st.form("Decode"):
+            dimg = st.file_uploader("Upload Audio", type=["mp3"])
+            submitted = st.form_submit_button("Decode")
+            if submitted:
+                if dimg is not None:
+                    file_details = {"FileName": dimg.name, "FileType": dimg.type}
+                    with open(os.path.join(os.path.join("pages/Imagedir",dimg.name)),"wb") as f: 
+                        f.write(dimg.getbuffer())
+                    # decoded_image = decode_image(os.path.join("pages/Imagedir",dimg.name))
+                    with open(os.path.join("pages/Imagedir","text.txt"), "rb") as file:
+                        decoded_image = file.read().decode()
+                    print(decoded_image)
+                    st.success("Image Decoded Successfully")
+                    st.write("Decoded Message: ",decoded_image)
+        
