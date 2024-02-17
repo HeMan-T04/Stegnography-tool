@@ -9,7 +9,8 @@ st.markdown(footer,unsafe_allow_html=True)
 if __name__ == "__main__":
     # with st.spinner('Wait for it...'):
     #     time.sleep(2)
-    st.write("<h1 style='text-align: center; font-size: 50px;'><b>Web Based Steganography Tool</b></h1>",unsafe_allow_html=True)
+    st.write("",unsafe_allow_html=True)
+    st.write("<div style='display:flex;justify-content: center'><img style='postion:fixed; top:0; right:0;display: inline-block; vertical-align: top;' src='https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/logo-e78ff0ab.webp?alt=media&token=03ddd35d-006c-40cd-9ced-86b7ef0d7c9f' width=100><h1 style='text-align: center; font-size: 50px;'><b>Web Based Steganography Tool</b></h1></div>",unsafe_allow_html=True)
     st.write("<p style='text-align: center; font-style: italic; font-size: 20px;'>All in one solution to send messages hidden in regular stuff</p>",unsafe_allow_html=True)
     # st.markdown('<a href="/Image_Steganography" target="_self">Next page</a>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
