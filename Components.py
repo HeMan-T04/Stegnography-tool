@@ -14,7 +14,29 @@ def create_card(url, title,align,link):
         </div>
         </div></a>'''
     return c1
+# Logo component
+logo='''
+<style>
+a:link , a:visited{
+color:inherit;
+background-color: transparent;
+}
 
+a:hover,  a:active {
+background-color: transparent;
+}
+
+.logo {
+position: fixed;
+top: 1;
+zindex:2147483647;
+left:100;
+text-align: left;
+}
+</style>
+<div class="logo">
+<img src="https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/logo-e78ff0ab.webp?alt=media&token=03ddd35d-006c-40cd-9ced-86b7ef0d7c9f" width="150" height="150"></div>
+'''
 # footer component
 footer="""<style>
 a:link , a:visited{
