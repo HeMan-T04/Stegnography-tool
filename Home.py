@@ -9,7 +9,7 @@ st.markdown(footer,unsafe_allow_html=True)
 if __name__ == "__main__":
     # with st.spinner('Wait for it...'):
     #     time.sleep(2)
-    st.write(logo,unsafe_allow_html=True)
+    
     st.write("<div style='display:flex;justify-content: center'><h1 style='text-align: center; font-size: 50px;'><b>Web Based Steganography Tool</b></h1></div>",unsafe_allow_html=True)
     st.write("<p style='text-align: center; font-style: italic; font-size: 20px;'>All in one solution to send messages hidden in regular stuff</p>",unsafe_allow_html=True)
     # st.markdown('<a href="/Image_Steganography" target="_self">Next page</a>', unsafe_allow_html=True)
