@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 from Components import create_card, footer, logo
 st.set_page_config(page_title='Web Based Steganography Tool', page_icon='https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/favicon.ico?alt=media&token=ba72f22f-3188-4e27-9ed7-19ddad766f0a',layout = 'wide', initial_sidebar_state = 'auto')
 # st.set_page_config(layout="wide")
-st.markdown(footer,unsafe_allow_html=True)
+# st.markdown(footer,unsafe_allow_html=True)
 
 if __name__ == "__main__":
     # with st.spinner('Wait for it...'):
