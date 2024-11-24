@@ -18,4 +18,4 @@ if __name__ == "__main__":
         st.write(create_card('''https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/imagesteg.png?alt=media&token=17510005-2b8c-4a08-aa1d-7c1b0b14e44f''','''Image Steganography''','''left''','''/Image_Steganography'''),unsafe_allow_html=True)
 
     with col2:
-        st.write(create_card('''https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/textsteg.png?alt=media&token=3561afd0-7ef0-4a5c-ac0a-3b0011961018''','''Binary Steganography''','''right''','''/Text_Steganography'''),unsafe_allow_html=True)
+        st.write(create_card('''https://firebasestorage.googleapis.com/v0/b/stegproject-99219.appspot.com/o/Designer%20(1).png?alt=media&token=11811adb-8a65-49d5-8a85-782cc8121093''','''Binary Steganography''','''right''','''/Binary_Steganography'''),unsafe_allow_html=True)
