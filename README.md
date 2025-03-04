@@ -1,8 +1,4 @@
 # Stegnography-tool
-It is a Web Based Stegnography tool, i am building as my personal project.
-# Stegnography-tool
-It is a Web Based Stegnography tool, i am building as my personal project.
-
 A comprehensive tool, accessible online without installation, enables secure sharing of secrets embedded in various file types—images, audio, video, and text. User-friendly and versatile, it ensures convenience while maintaining confidentiality.
 
 ## Tech Stack
